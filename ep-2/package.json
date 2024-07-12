@@ -1,0 +1,14 @@
+{
+  "name": "ep-2",
+  "version": "1.0.0",
+  "description": "ep-2 work",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Rohit",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
