@@ -1,0 +1,19 @@
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.navBar {
+  display: flex;
+  flex: wrap;
+  justify-content: space-between;
+  border: black 1px solid;
+}
+
+.right > ul {
+  display: flex;
+  flex: wrap;
+  list-style: none;
+  gap: 80px;
+  padding: 2px;
+}
