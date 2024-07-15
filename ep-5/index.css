@@ -1,0 +1,35 @@
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.navBar {
+  display: flex;
+  flex: wrap;
+  justify-content: space-between;
+  border: black 1px solid;
+}
+
+.right > ul {
+  display: flex;
+  flex: wrap;
+  list-style: none;
+  gap: 80px;
+  padding: 2px;
+}
+
+.cardContainer {
+  border: 1px solid black;
+  margin: 8px;
+  background-color: #f0f0f0;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-image {
+  width: 250px;
+  height: 150px;
+}
