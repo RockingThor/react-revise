@@ -7,6 +7,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import Menu from "./components/Menu";
+import Form from "./components/Form";
 
 const App = () => {
   return (
@@ -40,6 +41,10 @@ const appRouter = createBrowserRouter([
       },
     ],
     errorElement: <Error />,
+  },
+  {
+    path: "/form",
+    element: <Form />,
   },
 ]);
 

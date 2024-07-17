@@ -14,10 +14,23 @@ function compositeOfTwo(fn1, fn2) {
 
 const task = compositeOfTwo(add, square);
 
-console.log(task(2, 3));
-
-myfun();
+// console.log(task(2, 3));
 
 const myfun = () => {
   console.log("hello");
 };
+
+// Closures
+let a = 10;
+function outer() {
+  const f = function inner() {
+    console.log(a);
+  };
+  return f;
+}
+
+a = 30;
+
+const fun = outer();
+
+// fun();
