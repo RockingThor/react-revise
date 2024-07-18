@@ -34,3 +34,17 @@ a = 30;
 const fun = outer();
 
 // fun();
+
+const timeout = setTimeout(() => {
+  console.log("From timeout");
+}, 3000);
+
+let a2 = 10;
+console.log(timeout);
+
+setTimeout(() => {
+  console.log(a2);
+  console.log(timeout);
+}, 4000);
+
+a2 = 11;

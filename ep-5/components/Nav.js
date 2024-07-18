@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import useInternetStatus from "../hooks/useInternetStatus";
 const NavBar = () => {
+  const isOnline = useInternetStatus();
   return (
     <div className="navBar">
       <div className="left">
@@ -11,6 +13,7 @@ const NavBar = () => {
       </div>
       <div className="right">
         <ul>
+          <li>Connectivity: {isOnline ? "✅" : "❌"}</li>
           <li>
             <Link to={"/"}>Home</Link>
           </li>

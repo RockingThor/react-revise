@@ -17,3 +17,16 @@ const Card = (props) => {
 };
 
 export default Card;
+
+export const HigherOrderCard = (Card) => {
+  return (props) => {
+    return (
+      <>
+        <label className="absolute bg-black text-white p-2 m-2 rounded-md">
+          {"Opened"}
+        </label>
+        <Card {...props} />
+      </>
+    );
+  };
+};

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import Card from "./Card";
+import Card, { HigherOrderCard } from "./Card";
 import { Link } from "react-router-dom";
 
 const Body = () => {
   const [allData, setAllData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const CardWithLabel = HigherOrderCard(Card);
 
   const fetchData = async () => {
     const response = await fetch(
@@ -23,6 +24,7 @@ const Body = () => {
 
   useEffect(() => {
     fetchData();
+    console.log(allData);
   }, []);
 
   return (
@@ -31,7 +33,11 @@ const Body = () => {
         <div className="card" key={item.info.id}>
           {" "}
           <Link to={`/restaurant/${item.info.name}`}>
-            <Card info={item.info} />
+            {item.info.isOpen ? (
+              <CardWithLabel info={item.info} />
+            ) : (
+              <Card info={item.info} />
+            )}
           </Link>
         </div>
       ))}
