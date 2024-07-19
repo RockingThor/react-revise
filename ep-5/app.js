@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import NavBar from "./components/Nav";
 import Body from "./components/Body";
@@ -9,6 +9,8 @@ import Error from "./components/Error";
 import Menu from "./components/Menu";
 import Form from "./components/Form";
 
+const StarRatingLazy = lazy(() => import("./components/StarRating"));
+
 const App = () => {
   return (
     <>
@@ -17,7 +19,6 @@ const App = () => {
     </>
   );
 };
-
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -45,6 +46,14 @@ const appRouter = createBrowserRouter([
   {
     path: "/form",
     element: <Form />,
+  },
+  {
+    path: "/rate",
+    element: (
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <StarRatingLazy />
+      </Suspense>
+    ),
   },
 ]);
 

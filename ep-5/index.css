@@ -52,3 +52,23 @@ p {
 input {
   margin: 5px;
 }
+
+.starComponent {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  font-size: 80px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.ratingSubmitBtn {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+}
