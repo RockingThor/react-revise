@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import NavBar from "./components/Nav";
 import Body from "./components/Body";
@@ -8,14 +8,18 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import Menu from "./components/Menu";
 import Form from "./components/Form";
+import ValueContext from "./hooks/useContext";
 
 const StarRatingLazy = lazy(() => import("./components/StarRating"));
 
 const App = () => {
+  const [name, setName] = useState("Default");
   return (
     <>
-      <NavBar />
-      <Outlet />
+      <ValueContext.Provider value={{ name, setName }}>
+        <NavBar />
+        <Outlet />
+      </ValueContext.Provider>
     </>
   );
 };

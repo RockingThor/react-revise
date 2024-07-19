@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import useInternetStatus from "../hooks/useInternetStatus";
+import { useContext } from "react";
+import ValueContext from "../hooks/useContext";
 const NavBar = () => {
   const isOnline = useInternetStatus();
+  const contextValue = useContext(ValueContext);
+
+  contextValue.setName("Nandi");
   return (
     <div className="navBar">
       <div className="left">
@@ -23,6 +28,7 @@ const NavBar = () => {
           <li>
             <Link to={"/contact"}>Contact</Link>
           </li>
+          <li>{contextValue.name}</li>
         </ul>
       </div>
     </div>

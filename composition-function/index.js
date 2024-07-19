@@ -202,14 +202,36 @@ const myfun = () => {
 // counter.decrement(); // 0
 // counter.increment(); // 1
 
-var a = 10;
-function outer() {
-  var a = 20;
-  return function inner() {
-    var a = 30;
-    console.log(a);
+// var a = 10;
+// function outer() {
+//   var a = 20;
+//   return function inner() {
+//     var a = 30;
+//     console.log(a);
+//   };
+// }
+
+// var func = outer();
+// func(); // 30
+
+function implementDebounce(func, delay) {
+  let timerId;
+
+  return (...args) => {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+      func(...args);
+    }, delay);
   };
 }
 
-var func = outer();
-func(); // 30
+const increment = (i) => {
+  ++i;
+  console.log(i);
+};
+
+const debouncedFunction = implementDebounce(increment, 1000);
+
+console.log(debouncedFunction);
+console.log(debouncedFunction(0));
+console.log(debouncedFunction(0));
