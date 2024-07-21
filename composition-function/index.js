@@ -214,24 +214,4 @@ const myfun = () => {
 // var func = outer();
 // func(); // 30
 
-function implementDebounce(func, delay) {
-  let timerId;
-
-  return (...args) => {
-    clearTimeout(timerId);
-    timerId = setTimeout(() => {
-      func(...args);
-    }, delay);
-  };
-}
-
-const increment = (i) => {
-  ++i;
-  console.log(i);
-};
-
-const debouncedFunction = implementDebounce(increment, 1000);
-
-console.log(debouncedFunction);
-console.log(debouncedFunction(0));
-console.log(debouncedFunction(0));
+//
