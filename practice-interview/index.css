@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn {
+  border: solid 1px black;
+  width: 100pxpx;
+  margin: 10px;
+  width: 100px;
+  align-self: center;
+}
