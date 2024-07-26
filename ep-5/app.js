@@ -11,6 +11,8 @@ import Form from "./components/Form";
 import ValueContext from "./hooks/useContext";
 import { Provider } from "react-redux";
 import Accordian from "./components/Accordian";
+import Pagination from "./interview/Pagination";
+import GridComponent from "./interview/GridComponent";
 
 const StarRatingLazy = lazy(() => import("./components/StarRating"));
 
@@ -70,6 +72,14 @@ const appRouter = createBrowserRouter([
   {
     path: "/accordian",
     element: <Accordian contentArray={accordianContent} />,
+  },
+  {
+    path: "/pagination",
+    element: <Pagination />,
+  },
+  {
+    path: "/grid",
+    element: <GridComponent />,
   },
 ]);
 

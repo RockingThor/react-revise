@@ -79,3 +79,66 @@ input {
   justify-content: center;
   border: solid 1px black;
 }
+
+.content__box {
+  height: 300px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 2px;
+}
+
+.content__image {
+  height: 200px;
+  width: 300px;
+}
+
+.pagination__card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination__item {
+  margin: 10px;
+  border: 3px solid black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.current__page {
+  background-color: grey;
+}
+
+.grid__outer__box {
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
+  margin: 5px;
+}
+
+.grid__row {
+  display: flex;
+}
+
+.grid__box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.background__green {
+  background-color: green;
+}
+
+.background__grey {
+  background-color: grey;
+}
