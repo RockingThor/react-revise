@@ -113,4 +113,4 @@ function iterative(arr, depth) {
   return arr;
 }
 
-console.log(iterative([1, 2, 3, [4, 5, [6, 7]]], Infinity));
+// console.log(iterative([1, 2, 3, [4, 5, [6, 7]]], Infinity));
