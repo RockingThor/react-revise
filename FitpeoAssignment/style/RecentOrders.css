@@ -1,0 +1,30 @@
+/* RecentOrders.css */
+.recent-orders {
+  background-color: #2a2c2d;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.recent-orders h2 {
+  margin-bottom: 1rem;
+}
+
+.recent-orders table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recent-orders table th,
+.recent-orders table td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.recent-orders table th {
+  background-color: #3b3d3e;
+}
+
+.recent-orders table tr:nth-child(even) {
+  background-color: #242526;
+}

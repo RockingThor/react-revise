@@ -39,9 +39,14 @@ function reducer(state = initialState, action) {
         ),
       };
     }
+    default:
+      return state;
   }
 }
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__?.());
+export const productStore = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__?.()
+);
 
-store.dispatch({ type: addToCart });
+productStore.dispatch({ type: "@@INIT" });

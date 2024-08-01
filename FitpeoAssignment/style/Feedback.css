@@ -1,0 +1,32 @@
+/* Feedback.css */
+.feedback {
+  background-color: #2a2c2d;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.feedback h2 {
+  margin-bottom: 1rem;
+}
+
+.feedback ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feedback ul li {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #3b3d3e;
+  border-radius: 4px;
+}
+
+.feedback ul li p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.feedback ul li span {
+  color: gold;
+}

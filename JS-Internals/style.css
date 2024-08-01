@@ -1,0 +1,21 @@
+.outerDiv {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.innerDiv {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+.btn {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.form {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+}

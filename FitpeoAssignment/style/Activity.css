@@ -1,0 +1,11 @@
+/* Activity.css */
+.activity {
+  background-color: #2a2c2d;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.activity h2 {
+  margin-bottom: 1rem;
+}

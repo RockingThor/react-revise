@@ -1,0 +1,30 @@
+/* Header.css */
+.header {
+  background-color: #1f2122;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.search-bar {
+  background-color: #2a2c2d;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: #fff;
+  width: 200px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

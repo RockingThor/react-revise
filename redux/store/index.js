@@ -20,11 +20,7 @@ function reducer(state = initialState, action) {
   }
 }
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__?.());
-
-const subscribe = store.subscribe(() => {
-  console.log(store.getState());
-});
-
-store.dispatch({ type: increment });
-store.dispatch({ type: increment });
+export const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__?.()
+);

@@ -12,6 +12,7 @@ const Login = () => {
   const name = useRef(null);
 
   const handleSubmit = async () => {
+    console.log(email.current);
     const { error, status } = validateFormInputs(
       email.current.value,
       password.current.value,
@@ -97,14 +98,15 @@ const Login = () => {
         >
           {isSignUp ? "Sign Up" : "Login"}
         </button>
+        {error && <p className="font-bold text-red-600">{errorMessage}</p>}
         <p className="text- center pt-6">
           {isSignUp ? "Already have an account?" : "Don't have an account?"}{" "}
-          <p
+          <span
             className="text-blue-500 cursor-pointer"
             onClick={() => setIsSignUp(!isSignUp)}
           >
             {isSignUp ? "Login here" : "Sign up here"}
-          </p>
+          </span>
         </p>
       </form>
     </>
