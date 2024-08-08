@@ -1,1 +1,64 @@
+.container {
+  max-width: 1200px;
+  width: calc(100vw-4rem);
+  margin: 2rem auto;
+}
 
+.divider {
+  border-top: 1px solid #bbb;
+}
+
+.comment {
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  max-width: 500px;
+  margin-top: 5px;
+}
+
+.comment__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: darkslategray;
+}
+
+.comment__body {
+  padding: 5px;
+  font-family: serif;
+  color: midnightblue;
+}
+
+.comment__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+  padding: 5px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: darkslategray;
+}
+.outer__comment {
+  max-width: 500px;
+}
+
+.see__replies__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(67, 73, 143);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.nested__comment {
+  padding-left: 25px;
+}
+
+.icon__comment {
+  cursor: pointer;
+}
