@@ -15,7 +15,7 @@ export function useAsync(cb, dependencies = []) {
 }
 
 export function useAsyncFn(cb, dependencies = []) {
-  return useAsync(cb, dependencies, false);
+  return useAsyncInternal(cb, dependencies, false);
 }
 
 export function useAsyncInternal(cb, dependencies, initialLoading = false) {

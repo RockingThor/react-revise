@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useAsync } from "../hooks/useAsync";
 import { getIndividualPost } from "../services/posts";
@@ -13,10 +13,17 @@ export function usePost() {
 export function PostProvider({ children }) {
   const { id } = useParams();
   const { loading, error, value } = useAsync(() => getIndividualPost(id), [id]);
+  const [comment, setComment] = useState([]);
+
+  useEffect(() => {
+    if (value?.comments) return;
+    setComment(value?.comments);
+  }, [value?.comments]);
+
   const groupedCommentsByParent = useMemo(() => {
-    if (loading || error) return [];
+    if (loading || error || !comment) return [];
     let comments = {};
-    value.comments.forEach((com) => {
+    comment.forEach((com) => {
       if (com.parentId === null) {
         let prev = comments[null];
         if (prev) {
@@ -34,7 +41,13 @@ export function PostProvider({ children }) {
       }
     });
     return comments;
-  }, [value?.comments]);
+  }, [comment, loading, error]);
+
+  function addCommentLocally(comm) {
+    setComment((prevComment) => {
+      return [comm, ...prevComment];
+    });
+  }
 
   function getReplies(parentId) {
     return groupedCommentsByParent[parentId];
@@ -45,6 +58,7 @@ export function PostProvider({ children }) {
         post: { id, ...value },
         groupedComments: groupedCommentsByParent,
         getReplies,
+        addCommentLocally,
       }}
     >
       {loading ? <h1>Loading...</h1> : error ? <h1>Error</h1> : children}

@@ -4,6 +4,7 @@ import { FaHeart, FaReply, FaRegEdit, FaTrash } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import MyButton from "./MyButton";
+import CommentForm from "./CommentForm";
 
 const Comment = ({ comment, getReplies }) => {
   console.log(comment[null]);
@@ -12,6 +13,7 @@ const Comment = ({ comment, getReplies }) => {
   const [viewReply, setViewReply] = useState(false);
   const [numOfReplies, setNumOfReplies] = useState(0);
   const [childComment, setChildComment] = useState([]);
+  const [viewReplyForm, setViewReplyForm] = useState(false);
 
   useEffect(() => {
     const childComponents = getReplies(id);
@@ -23,7 +25,9 @@ const Comment = ({ comment, getReplies }) => {
   function onLike() {}
   function onEdit() {}
   function onDelete() {}
-  function onReply() {}
+  function onReply() {
+    setViewReplyForm(!viewReplyForm);
+  }
 
   return (
     <div className="outer__comment">
@@ -42,6 +46,11 @@ const Comment = ({ comment, getReplies }) => {
           <MyButton Icon={FaTrash} functionToCall={onDelete} />
         </div>
       </div>
+      {viewReplyForm && (
+        <div className="reply__form">
+          <CommentForm parentId={id} textToShow={""} />
+        </div>
+      )}
       {numOfReplies > 0 && (
         <>
           <span

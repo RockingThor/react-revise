@@ -1,0 +1,42 @@
+.selected__box {
+  max-width: 300px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.value__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.individual__value {
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.remove__button {
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.select__box {
+  max-width: 300px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item__list {
+  position: relative;
+  list-style: none;
+}
+.list__item:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
