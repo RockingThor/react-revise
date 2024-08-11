@@ -10,7 +10,7 @@ function printPascalTriangle(rows) {
   }
 }
 
-printPascalTriangle(7);
+// printPascalTriangle(7);
 
 /**
  * Returns the font style class based on the given type.
@@ -33,14 +33,19 @@ function getFontStyleClass(type) {
   return fontFamily || fontFamily["default"];
 }
 
-const promise = new Promise((resolve) => {
-  console.log("Inside promise");
-  resolve("Hello");
-});
+// const promise = new Promise((resolve) => {
+//   console.log("Inside promise");
+//   resolve("Hello");
+// });
 
-promise.then((val) => {
-  console.log(val);
-  console.log("After promise");
-});
+// promise.then((val) => {
+//   console.log(val);
+//   console.log("After promise");
+// });
 
 // getFontStyleClass("");
+
+const cbArray = [];
+cbArray.push((result) => {
+  console.log(result);
+});
