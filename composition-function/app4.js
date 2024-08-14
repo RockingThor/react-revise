@@ -28,9 +28,9 @@ function getFontStyleClass(type) {
     button: "font-medium text-lg font-sans",
     quote: "font-italic text-lg font-serif",
     default: "font-normal text-base font-sans",
-  }[type];
+  };
 
-  return fontFamily || fontFamily["default"];
+  return fontFamily[type] || fontFamily["default"];
 }
 
 // const promise = new Promise((resolve) => {
