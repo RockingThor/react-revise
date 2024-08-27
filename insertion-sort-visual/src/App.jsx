@@ -1,10 +1,11 @@
 import "./App.css";
-import InsertionSort from "./components/InsertionSort";
+// import InsertionSort from "./components/InsertionSort";
+import QuickSort from "./components/QuickSort";
 
 function App() {
   return (
     <>
-      <InsertionSort />
+      <QuickSort />
     </>
   );
 }

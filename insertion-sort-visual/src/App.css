@@ -48,3 +48,11 @@
   margin-left: 2px;
   background-color: chartreuse;
 }
+
+.change-index {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 3px;
+  margin-left: 2px;
+  background-color: rgb(84, 135, 171);
+}

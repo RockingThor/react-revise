@@ -38,6 +38,22 @@ function render(obj) {
   if (typeof obj === "string") {
     return document.createTextNode(obj);
   }
+  const {
+    type,
+    props: { children, ...atr },
+  } = obj;
+  const element = document.createElement(type);
+  for (let [attr, value] of Object.entries(atr)) {
+    element[attr] = value;
+  }
+
+  let childrenArr = Array.isArray(children) ? children : [children];
+
+  for (let child of childrenArr) {
+    element.append(render(child));
+  }
+
+  return element;
 }
 
 console.log(virtualize(el));
