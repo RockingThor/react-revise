@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">welcome to toast</h1>
+      <div class="toast-container" toast-position="bottom-left"></div>
+      <div class="toast-container" toast-position="bottom-right"></div>
+      <div class="toast-container" toast-position="top-left"></div>
+      <div class="toast-container" toast-position="top-right"></div>
+      <div class="content">
+        <h2>To test the library click:</h2>
+        <div class="buttons">
+          <button id="btn-top-left">Toast top-left</button>
+          <button id="btn-top-right">Toast top-right</button>
+          <button id="btn-bottom-left">Toast bottom-left</button>
+          <button id="btn-bottom-right">Toast bottom-right</button>
+        </div>
+        <div class="time">
+          <select name="duration" id="duration-select">
+            <option value="">Default Duration(3S)</option>
+            <option value="5">Duration 5s</option>
+            <option value="7">Duration 7s</option>
+            <option value="10">Duration 10s</option>
+            <option value="15">Duration 15s</option>
+          </select>
+        </div>
+        <div class="content-text">
+          <input type="text" id="text-content" placeholder="Toast input" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js" type="module"></script>
+</html>

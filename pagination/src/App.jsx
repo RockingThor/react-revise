@@ -13,17 +13,17 @@ function App() {
       data.json().then((data) => {
         setData(data);
         setDataToRender(data.slice(0, toShowCount));
-        let numOfPages = Math.ceil(data.length / toShowCount);
-        let tempPages = [];
-        for (let i = 1; i <= numOfPages; i++) {
-          tempPages.push(i);
-        }
-        setPages(tempPages);
       })
     );
   }, []);
 
   useEffect(() => {
+    let numOfPages = Math.ceil(data.length / toShowCount);
+    let tempPages = [];
+    for (let i = 1; i <= numOfPages; i++) {
+      tempPages.push(i);
+    }
+    setPages(tempPages);
     setDataToRender(data.slice((page - 1) * toShowCount, page * toShowCount));
   }, [page, data, toShowCount]);
 
