@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  font-family: salsa;
+  scrollbar-width: none;
+}
+section {
+  background-color: #f99501;
+}
+.hero__section {
+  min-height: 100vh;
+  background-image: url("./assets/images/orange_hero_back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.jhalar__div {
+  margin-bottom: -160px;
+  img {
+    width: 300px;
+  }
+}
+
+.wishing__text__div {
+  margin-left: 270px;
+  max-width: 587px;
+}
+.audio__div {
+  margin-left: 270px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding-left: 5px;
+  background-color: #fbd8a4;
+  width: max-content;
+  border-radius: 50px;
+  audio::-webkit-media-controls-panel {
+    background-color: #fbd8a4;
+  }
+}
+.wish {
+  font-family: salsa;
+  font-size: 2.2rem;
+}
+.deepak__section {
+  img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 840px) {
+  .jhalar__div {
+    margin-bottom: -1rem;
+  }
+  .wishing__text__div {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+  .audio__div {
+    span {
+      display: none;
+    }
+    .image {
+      display: none;
+    }
+    margin-left: 1rem;
+    padding-left: 0;
+    max-width: 90%;
+  }
+  .second__deepak {
+    display: none;
+  }
+  .deepak__section {
+    .first__deepak {
+      width: 250px;
+      display: block;
+      margin-left: auto;
+    }
+  }
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px;
+  .horizonatal__line {
+    width: 400px;
+    height: 3px;
+    background-color: white;
+  }
+  .circle {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: white;
+    flex-shrink: 0;
+  }
+}
+.laxmi__ganesh__section {
+  padding-inline: 1rem;
+  padding-bottom: 1px;
+}
+
+.laxmi__ganesh {
+  display: block;
+  max-width: 1350px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.laxmi__ganesh__section__text {
+  font-family: Style Script;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.text__with__little__girl {
+  display: flex;
+  max-height: 800px;
+  justify-content: center;
+  .text__container {
+    max-width: 500px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 4rem;
+    font-size: 1.5rem;
+    height: fit-content;
+    margin-top: 10rem;
+    margin-left: 1rem;
+  }
+  .little__girl {
+    max-height: 1000px;
+    margin-left: -7rem;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .laxmi__ganesh__section__text {
+    font-size: 2rem;
+  }
+  .text__with__little__girl {
+    width: 100%;
+    .text__container {
+      padding: 1rem;
+      font-size: 0.8rem;
+      height: fit-content;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 0.5rem;
+    }
+    .little__girl {
+      margin-left: -2rem;
+      img {
+        width: 103px;
+      }
+    }
+  }
+}
+
+.laxmi__ganesh__img {
+  padding: 0.8rem;
+  margin-top: 0;
+  .container__laxmi__ganesh {
+    display: flex;
+    max-width: 1200px;
+    margin-inline: auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1rem;
+    img {
+      width: 50%;
+    }
+  }
+}
+.footer {
+  margin-top: -3rem;
+  margin-bottom: -3rem;
+  p {
+    text-align: left;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    margin-left: 10rem;
+  }
+  h1 {
+    font-family: Style Script;
+    font-size: 2.2rem;
+    margin-left: 15rem;
+  }
+  .credit {
+    text-align: right;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .footer {
+    p {
+      text-align: left;
+      font-size: 1.5rem;
+      padding-top: 2rem;
+      margin-left: 1rem;
+    }
+    h1 {
+      font-family: Style Script;
+      font-size: 1.5rem;
+      margin-left: 2rem;
+    }
+    .credit {
+      text-align: right;
+      padding: 1rem;
+    }
+  }
+}
