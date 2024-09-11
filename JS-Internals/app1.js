@@ -23,3 +23,42 @@ button.addEventListener("click", (event) => {
 //There are some events which do'nt bubble. Events like Focus, blur etc.
 
 //
+function groupBy(items, callback) {
+  console.log(callback);
+  console.log(callback(items[0]));
+}
+
+// groupBy([{ item: 1 }], ({ item }) => item);
+
+// let map = new Map();
+// map.set("a", 1);
+// map.set("b", 2);
+// map.set("c", 3);
+// map.set("d", 4);
+
+// map.forEach((key, value) => console.log(value));
+
+function deepClone(data) {
+  if (data === null || typeof data !== "object") {
+    return data;
+  }
+  let result = Array.isArray(data) ? [] : {};
+
+  Object.keys(data).map((key) => {
+    result[key] = deepClone(data[key]);
+  });
+
+  return result;
+}
+
+let myObj = {
+  a: 1,
+  b: {
+    c: {
+      d: 1,
+    },
+    e: 1,
+  },
+};
+
+console.log(deepClone(myObj));
