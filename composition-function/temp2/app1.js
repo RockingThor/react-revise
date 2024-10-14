@@ -56,3 +56,23 @@ Function.prototype.myCall = function (context, ...args) {
 
   const result = this();
 };
+
+function validate(str) {
+  let stack = [];
+  for (let i = 0; i < str.length; i++) {
+    let item = str[i];
+    if (item === "{" || item === "(" || item === "[") {
+      stack.push(item);
+    } else {
+      if (stack.length === 0) return false;
+      let element = stack.pop();
+      if (element != item) {
+        console.log(element, item);
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+console.log(validate("[]"));
